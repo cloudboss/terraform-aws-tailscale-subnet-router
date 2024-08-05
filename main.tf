@@ -191,10 +191,6 @@ module "user_data" {
 
   env = [
     {
-      name  = "PATH"
-      value = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-    },
-    {
       name  = "TS_ACCEPT_DNS"
       value = tostring(var.tailscale.accept_dns)
     },
