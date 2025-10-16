@@ -1,5 +1,5 @@
 terraform {
-  required_version = "=1.9.2"
+  required_version = "=1.13.3"
 
   required_providers {
     archive = {
@@ -13,10 +13,10 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "terraform-o2ym9tux"
-    dynamodb_table = "terraform-state-lock"
-    key            = "terraform/tail/terraform.tfstate"
-    region         = "us-east-1"
+    bucket       = "terraform-o2ym9tux"
+    key          = "terraform/tail/terraform.tfstate"
+    region       = "us-east-1"
+    use_lockfile = true
   }
 }
 
@@ -26,7 +26,7 @@ provider "aws" {
 
 module "tailscale" {
   source  = "cloudboss/tailscale-subnet-router/aws"
-  version = "0.1.0"
+  version = "0.2.0"
 
   ami                = local.ami
   autoscaling        = local.autoscaling

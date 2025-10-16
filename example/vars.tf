@@ -1,6 +1,6 @@
 locals {
   ami = {
-    name = "tailscale-v1.70.0"
+    name = "tailscale-v1.88.3"
   }
 
   autoscaling = {

@@ -25,7 +25,7 @@ variable "ami" {
       values = list(string)
     })), [])
     most_recent = optional(bool, true)
-    name        = optional(string, "tailscale-v1.70.0")
+    name        = optional(string, "tailscale-v1.88.3")
     owner       = optional(string, "256008164056")
   })
   description = "Configuration of the AMI for instances. One of filters or name must be set."

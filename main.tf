@@ -187,7 +187,7 @@ module "iam_role" {
 
 module "user_data" {
   source  = "cloudboss/easyto-user-data/aws"
-  version = "0.1.0"
+  version = "0.2.0"
 
   env = [
     {
